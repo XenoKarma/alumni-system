@@ -8,6 +8,19 @@ use App\Models\StudyProgram;
 
 class AlumniProfile extends Model
 {
+    protected $fillable = [
+        'user_id',
+        'study_program_id',
+        'nim',
+        'phone',
+        'entry_year',
+        'graduation_year',
+        'status',
+        'address',
+        'photo',
+        'linkedin',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

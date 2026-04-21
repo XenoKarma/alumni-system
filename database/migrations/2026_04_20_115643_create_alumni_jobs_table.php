@@ -15,9 +15,11 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('company_name');
             $table->string('position');
-            $table->text('address');
+            $table->text('company_address');
             $table->string('salary_range')->nullable();
             $table->year('job_start_year');
+            $table->year('job_end_year')->nullable();
+            $table->boolean('is_current_job')->default(true);
             $table->timestamps();
         });
     }

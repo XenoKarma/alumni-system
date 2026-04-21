@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->foreignId('study_program_id')->constrained()->cascadeOnDelete();
             $table->string('nim')->unique();
             $table->string('phone');
-            $table->string('email')->unique();
             $table->year('entry_year');
             $table->year('graduation_year');
             $table->enum('status', [

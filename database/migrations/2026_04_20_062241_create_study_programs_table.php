@@ -12,12 +12,15 @@ return new class extends Migration {
     {
         Schema::create('study_programs', function (Blueprint $table) {
             $table->id();
-            $table->enum('faculty', ['teknologi', 'sosial']);
+            $table->enum('faculty', [
+                'Teknologi',
+                'Sosial'
+            ]);
             $table->enum('name', [
-                'sistem informasi',
-                'teknik informatika',
-                'kesejahteraan sosial',
-                'ilmu komunikasi'
+                'Sistem Informasi',
+                'Teknik Informatika',
+                'Kesejahteraan Sosial',
+                'Ilmu Komunikasi'
             ]);
             $table->timestamps();
         });
